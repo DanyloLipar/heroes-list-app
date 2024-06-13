@@ -6,6 +6,7 @@ Also you could test it on your local machine.
 ## Getting Started
 
 Run the development server and load packages:
+```bash
 npm i
 ```bash
 npm run dev
