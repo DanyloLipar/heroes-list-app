@@ -1,0 +1,35 @@
+export interface IHero {
+  agi_gain: number;
+  attack_point: number;
+  attack_range: number;
+  attack_rate: number;
+  attack_type: string;
+  base_agi: number;
+  base_armor: number;
+  base_attack_max: number;
+  base_attack_min: number;
+  base_attack_time: number;
+  base_health: number;
+  base_health_regen: number;
+  base_int: number;
+  base_mana: number;
+  base_mana_regen: number;
+  base_mr: number;
+  base_str: number;
+  cm_enabled: boolean;
+  day_vision: number;
+  icon: string;
+  id: number;
+  img: string;
+  int_gain: number;
+  legs: number;
+  localized_name: string;
+  move_speed: number;
+  name: string;
+  night_vision: number;
+  primary_attr: string;
+  projectile_speed: number;
+  roles: string[];
+  str_gain: number;
+  turn_rate: any;
+}

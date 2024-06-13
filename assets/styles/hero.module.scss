@@ -1,0 +1,46 @@
+@import "../vars.scss";
+
+.card {
+  margin-top: 20px;
+  background-color: $second-background;
+}
+
+.box {
+  display: flex;
+  margin: 20px;
+}
+
+.abilityCard {
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: $second-background;
+  color: $general-background;
+
+  &:hover {
+    background-color: $second-background;
+    color: $general-background;
+  }
+}
+
+.showMore {
+  background-color: $general-background;
+  color: $second-background;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: $general-background;
+    color: $second-background;
+  }
+}
+
+.lore-container {
+  max-height: 210px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.expanded {
+  max-height: 800px;
+}
