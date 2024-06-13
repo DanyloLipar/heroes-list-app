@@ -21,19 +21,7 @@ import {
 import styles from "../../../assets/styles/heroes.module.scss";
 import { IHero } from "../../../types/hero";
 import Link from "next/link";
-
-export enum PrimaryAttribute {
-  All = "all",
-  Strength = "str",
-  Agility = "agi",
-  Intelligence = "int",
-}
-
-export enum AttackType {
-  All = "all",
-  Melee = "Melee",
-  Ranged = "Ranged",
-}
+import { AttackType, PrimaryAttribute } from "../../../types/enums";
 
 const HeroesList = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -118,10 +106,12 @@ const HeroesList = () => {
             label="Primary Attribute"
             className={styles.selection}
           >
-            <MenuItem value="all">All</MenuItem>
-            <MenuItem value="str">Strength</MenuItem>
-            <MenuItem value="agi">Agility</MenuItem>
-            <MenuItem value="int">Intelligence</MenuItem>
+            <MenuItem value={PrimaryAttribute.All}>All</MenuItem>
+            <MenuItem value={PrimaryAttribute.Strength}>Strength</MenuItem>
+            <MenuItem value={PrimaryAttribute.Agility}>Agility</MenuItem>
+            <MenuItem value={PrimaryAttribute.Intelligence}>
+              Intelligence
+            </MenuItem>
           </Select>
         </FormControl>
         <FormControl variant="outlined" fullWidth margin="normal">
@@ -131,9 +121,9 @@ const HeroesList = () => {
             onChange={(e) => setAttackTypeFilter(e.target.value)}
             label="Attack Type"
           >
-            <MenuItem value="all">All</MenuItem>
-            <MenuItem value="Melee">Melee</MenuItem>
-            <MenuItem value="Ranged">Ranged</MenuItem>
+            <MenuItem value={AttackType.All}>All</MenuItem>
+            <MenuItem value={AttackType.Melee}>Melee</MenuItem>
+            <MenuItem value={AttackType.Ranged}>Ranged</MenuItem>
           </Select>
         </FormControl>
         <TextField
